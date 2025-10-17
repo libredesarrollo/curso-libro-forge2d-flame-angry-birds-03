@@ -52,14 +52,14 @@ class PlayerBody extends BodyComponent with DragCallbacks {
   @override
   void onDragUpdate(DragUpdateEvent event) {
     final distancePositions =
-        (game.screenToWorld(event.canvasPosition) - originalPosition).length2;
+        (game.screenToWorld(event.canvasStartPosition) - originalPosition).length2;
     if (distancePositions < maxDistance2) {
-      body.setTransform(game.screenToWorld(event.canvasPosition), 0);
+      body.setTransform(game.screenToWorld(event.canvasStartPosition), 0);
     } else {
       // range out
       body.setTransform(
           originalPosition +
-              (game.screenToWorld(event.canvasPosition) - originalPosition)
+              (game.screenToWorld(event.canvasStartPosition) - originalPosition)
                       .normalized() *
                   maxDistance,
           0);

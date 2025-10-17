@@ -38,7 +38,6 @@ class MyGame extends Forge2DGame with TapDetector {
   @override
   void update(double dt) {
     _addBoxs(dt);
-
     if (world.children.query<box.BoxBody>().length ==
             box.getCurrentLevel(level: _currentLevel).length &&
         !boxsAdded) {
