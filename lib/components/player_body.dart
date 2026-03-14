@@ -5,8 +5,6 @@ import 'package:flame/events.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/sprite.dart';
 
-import 'package:forge2d/src/dynamics/body.dart';
-import 'package:flame_forge2d/body_component.dart';
 import 'package:flame_forge2d/flame_forge2d.dart';
 
 import 'package:angry03/utils/create_animation_by_limit.dart';
@@ -15,6 +13,7 @@ class PlayerBody extends BodyComponent with DragCallbacks {
   final double maxDistance = 15.0;
   final double maxDistance2 = 225.0;
 
+  @override
   Vector2 position;
   late Vector2 originalPosition;
   Function parentFunctionOnRemove;

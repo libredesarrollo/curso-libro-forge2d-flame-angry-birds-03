@@ -7,6 +7,7 @@ import 'package:flame/sprite.dart';
 import 'package:flame_forge2d/flame_forge2d.dart';
 
 class BoxBody extends BodyComponent {
+  @override
   final Vector2 position;
   bool boxAdded = false;
 
@@ -89,25 +90,25 @@ List<Box> getCurrentLevel({int level = 1}) {
     case 1:
       return [
         // line 1
-        Box(position: Vector2(800, 10)),
-        Box(position: Vector2(840, 10)),
-        Box(position: Vector2(880, 10)),
-        Box(position: Vector2(920, 10)),
-        Box(position: Vector2(960, 10)),
+        Box(position: Vector2(400, 10)),
+        Box(position: Vector2(440, 10)),
+        Box(position: Vector2(480, 10)),
+        Box(position: Vector2(520, 10)),
+        Box(position: Vector2(560, 10)),
         //line 2
-        Box(position: Vector2(820, 10)),
-        Box(position: Vector2(860, 10)),
-        Box(position: Vector2(900, 10)),
-        Box(position: Vector2(940, 10)),
+        Box(position: Vector2(420, 10)),
+        Box(position: Vector2(460, 10)),
+        Box(position: Vector2(500, 10)),
+        Box(position: Vector2(540, 10)),
         //line 3
-        Box(position: Vector2(840, 10)),
-        Box(position: Vector2(880, 10)),
-        Box(position: Vector2(920, 10)),
+        Box(position: Vector2(440, 10)),
+        Box(position: Vector2(480, 10)),
+        Box(position: Vector2(520, 10)),
         //line 3
-        Box(position: Vector2(860, 10)),
-        Box(position: Vector2(900, 10)),
+        Box(position: Vector2(460, 10)),
+        Box(position: Vector2(500, 10)),
         //line 4
-        Box(position: Vector2(880, 10))
+        Box(position: Vector2(480, 10))
       ];
     default:
       return [];
